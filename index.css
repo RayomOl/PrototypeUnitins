@@ -1,0 +1,180 @@
+head
+{
+    nav-down: auto;
+}
+body
+{
+    background-color: #353535;
+    color: white;
+    font-size: 20px; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 10%;
+    margin-top: 8%;
+}
+div
+{
+    margin-bottom: 50px;
+}
+table
+{
+    border: 1px #2D9CCE;
+    text-align: center;
+    border-style: solid;
+    width: 100%;
+}
+select
+{
+    text-align: center;
+}
+th
+{
+    color: #F7DC11;
+    border-style: solid;
+    padding: 5px;
+}
+td
+{
+    border: 1px #c0c0c0;
+    border-style: solid;
+    padding: 5px;
+}
+a:hover
+{
+    color: #F7DC11;
+}
+a
+{
+    color:  #2D9CCE; 
+    text-decoration: none;
+    padding: 5px;
+}
+article
+{
+    display: flex;
+    margin-top: 50px;
+}
+p
+{
+    font-family: sans-serif;
+    margin-right: 5%;
+}
+fieldset
+{
+    margin: 25px;
+    border-radius: 5px;
+    border: solid #696969 5px;
+    background-color: #353535;
+}
+.title
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: #c0c0c0;
+}
+
+.logo
+{  
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 75px;
+    background-image: url("fundo.jpg");
+    background-size: auto;
+    background-position: 50%;
+    background-position-y: 35%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px
+}
+.collapsible 
+{
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #2D9CCE;
+    color: white;
+    text-shadow: 2.5px 2.5px black;
+    cursor: pointer;
+    padding: 15px;
+    width: 25%;
+    height: 25%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+}
+.character
+{
+    margin-top: 5px;
+    width: 150px;
+}
+.content
+{
+    position: absolute;
+    margin-left: 325px;
+    margin-top: -250px;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    background-color: #353535;
+    width: 50%;
+    border-radius: 5px;
+}
+.active, .collapsible:hover 
+{
+    background-color: #2d9bcecc;
+}
+.date
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    margin-top: 0px;
+    margin-bottom: -20 px;
+    color: #d3161c;
+}
+.choss
+{
+    text-align: center;
+}
+.form
+{
+    color: #F7DC11;
+    margin-top: -50px;
+    text-decoration: none;
+    right: 10%;
+    border-radius: 50px;
+    border: solid 2.5px #2D9CCE;
+    width: fit-content;
+    background-color: #2D9CCE50;
+    position:absolute
+}
+.announce
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 45px;
+    color: #F7DC11;
+}
+.nome
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:35px;
+    color: #2D9CCE;
+}
+.loginbox
+{
+    border-radius: 10px;
+    background-color: #524d4d;
+    margin: auto auto auto auto;
+    padding: 50px 5px 5px 5px;
+    width: 25%;
+}
+.about
+{
+    display: flex;
+}
+.creators
+{
+    margin-right: 25px;
+    height: 30%;
+    width: 25%;
+    border-radius: 5px;
+}
