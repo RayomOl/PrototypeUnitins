@@ -1,12 +1,208 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="sobre_style.css">
+    <title>South Park</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos gerais */
+        body {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background: #333; /* Fundo cinza escuro */
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline; /* Alinha os itens na horizontal */
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e90ff; /* Azul claro para os links */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Sublinhar ao passar o mouse */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Estilos para o pop-up */
+        .modal {
+            display: none; /* Oculta o modal por padrão */
+            position: fixed; /* Fixa no topo */
+            z-index: 1; /* Fica acima de outros elementos */
+            left: 0;
+            top: 0;
+            width: 100%; /* Largura total */
+            height: 100%; /* Altura total */
+            overflow: auto; /* Permite rolagem */
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+        }
+
+        .modal-content {
+            background-color: #222; /* Fundo cinza escuro para o conteúdo */
+            margin: 15% auto; /* Centraliza verticalmente */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Largura do conteúdo */
+            color: #fff; /* Texto branco dentro do modal */
+        }
+
+        .close {
+            color: #aaa;
+            float: right; /* Alinha o botão de fechar à direita */
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white; /* Muda a cor ao passar o mouse */
+            text-decoration: none;
+            cursor: pointer; /* Cursor em forma de mão */
+        }
+
+        /* Estilos para o rodapé dos integrantes */
+        .integrantes {
+            display: flex; /* Usa flexbox para alinhamento lado a lado */
+            justify-content: space-around; /* Espaça os itens uniformemente */
+            margin-top: 20px;
+        }
+
+        .integrante {
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .integrante strong {
+            display: block; /* Cada nome em uma linha separada */
+        }
+    </style>
 </head>
 <body>
+    <header>
+       <img src="South Park Wallpaper.jpg" width="600">
+    </header>
     
+    <nav>
+        <ul>
+            <li><a href="#" onclick="openModal('quemSomosModal')">Quem Somos</a></li>
+            <li><a href="#" onclick="openModal('historiaModal')">História</a></li>
+            <li><a href="#" onclick="openModal('personagensModal')">Personagens</a></li>
+            <li><a href="#" onclick="openModal('curiosidadesModal')">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>Integrantes do grupo:</p>
+        <div class="integrantes">
+            <div class="integrante">
+                <strong>Isabella Gomes Tavares</strong>
+                <span>Responsável pela página sobre</span>
+            </div>
+            <div class="integrante">
+                <strong>Murilo Lins Kern</strong>
+                <span>Responsável pela página contatos</span>
+            </div>
+            <div class="integrante">
+                <strong>Rayom Oliva e Carvalho</strong>
+                <span>Responsável pela página inicial</span>
+            </div>
+        </div>
+        <p>© 2024 South Park Fan Page</p>
+    </footer>
+
+    <!-- Modal Quem Somos -->
+    <div id="quemSomosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('quemSomosModal')">&times;</span>
+            <h2>Quem Somos</h2>
+            <p>Somos uma enciclopédia colaborativa sobre a série de animação americana South Park, que funciona na internet a fim de oferecer conteúdo, objetivo e verificável da mesma sobre seus personagens e história.</p>
+        </div>
+    </div>
+
+    <!-- Modal História -->
+    <div id="historiaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('historiaModal')">&times;</span>
+            <h2>História</h2>
+            <p>South Park é uma série de animação criada por Trey Parker e Matt Stone, que estreou em 1997. A série segue a vida de quatro crianças – Stan, Kyle, Cartman e Kenny – na fictícia cidade de South Park, Colorado. Conhecida por seu humor ácido e críticas sociais, a série aborda diversos temas contemporâneos e polêmicos.</p>
+        </div>
+    </div>
+
+    <!-- Modal Personagens -->
+    <div id="personagensModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('personagensModal')">&times;</span>
+            <h2>Personagens Principais</h2>
+            <ul>
+                <li><strong>Stan Marsh</strong>: O protagonista sensato do grupo.</li>
+                <li><strong>Kyle Broflovski</strong>: O amigo moralista, de origem judaica.</li>
+                <li><strong>Eric Cartman</strong>: O anti-herói egocêntrico e manipulador.</li>
+                <li><strong>Kenny McCormick</strong>: O amigo que geralmente "morre" de maneiras absurdas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Curiosidades -->
+    <div id="curiosidadesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('curiosidadesModal')">&times;</span>
+            <h2>Curiosidades</h2>
+            <p>Sabia que:</p>
+            <ul>
+                <li>A série começou como um curta-metragem chamado "The Spirit of Christmas"?</li>
+                <li>Os criadores, Trey Parker e Matt Stone, também dublam vários personagens da série.</li>
+                <li>South Park já ganhou vários prêmios Emmy ao longo dos anos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Funções para abrir e fechar os modais
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Fecha o modal se o usuário clicar fora dele
+        window.onclick = function(event) {
+            const modals = ['quemSomosModal', 'historiaModal', 'personagensModal', 'curiosidadesModal'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
